@@ -1,0 +1,11 @@
+- name: Test my module
+  hosts: localhost
+  tasks:
+  - name: Run module
+    my_module:
+      name: test2
+      path: .
+      content: lalalala
+    register: module_out
+  - debug:
+      var: module_out
